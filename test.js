@@ -73,16 +73,6 @@ function renderQuestion() {
 
 // Data Handling
 
-function loadQuestion() {
-    // Check if there are questions to load
-    if (currentQuestionIndex < questions.length) {
-        renderQuestion(); // Call the renderQuestion function to display the current question
-    } else {
-        // If there are no more questions, display the final score or review
-        displayFinalScore();
-    }
-}
-
 function saveQuestionData(isCorrect, timeSpent, chosenAnswer = null, correctAnswer = null) {
     let quizData = JSON.parse(localStorage.getItem('quizData')) || {
         correct: [],
@@ -345,6 +335,61 @@ function restartQuiz() {
     loadQuestion(); 
 }
 
+//Answers
+
+function selectAnswer(selectedIndex, answerItem, isCorrect) {
+    clearInterval(timer); // Stop the timer when an answer is selected
+
+    const currentQuestion = questions[currentQuestionIndex];
+    const correctAnswers = currentQuestion.answers.filter(answer => answer.correct).map(answer => answer.text);
+    const remainingTime = parseInt(document.getElementById('time').textContent, 10); // Get the remaining time
+    const timeSpent = 20 - remainingTime; // Calculate time spent
+    totalTimeSpent += timeSpent; // Update the total time spent
+    // Disable all answer options
+    const answerItems = document.querySelectorAll('#questions-container li');
+    answerItems.forEach(item => {
+        item.style.pointerEvents = 'none'; // Disable further clicks
+    });
+
+    if (isCorrect) {
+        score++; // Increment score if the answer is correct
+        correctAnswersCount++; // Increment correct answers count
+        answerItem.classList.add('correct'); // Highlight the correct answer
+        saveQuestionData(true, timeSpent); // Save data for correct answer
+    } else {
+        wrongAnswersCount++; // Increment wrong answers count
+        answerItem.classList.add('incorrect'); // Highlight the incorrect answer
+        saveQuestionData(false, remainingTime, answerItem.textContent, correctAnswers[0]); // Save data for wrong answer
+        showCorrectAnswer(); // Call the function to highlight the correct answer
+    }
+
+    // Update the score display
+    document.getElementById('score-value').textContent = score; // Update score display
+
+    // Show the Next button
+    const nextButton = document.getElementById('next-button');
+    nextButton.style.display = 'block';
+}
+
+
+function showCorrectAnswer() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const correctAnswers = currentQuestion.answers.filter(answer => answer.correct);
+
+    // Highlight the correct answer(s)
+    const answerItems = document.querySelectorAll('#questions-container li');
+    answerItems.forEach(item => {
+        const answerText = item.textContent;
+        if (correctAnswers.some(answer => answer.text === answerText)) {
+            item.classList.add('correct'); // Add a class to highlight the correct answer
+        }
+    });
+
+    // Show the Next button
+    const nextButton = document.getElementById('next-button');
+    nextButton.style.display = 'block';
+}
+
 // Event listeners for the start & review quiz button
 document.getElementById('start-quiz-button').addEventListener('click', startQuiz);
 
@@ -360,6 +405,7 @@ document.getElementById('next-button').addEventListener('click', () => {
 });
 
 document.querySelector('#review').addEventListener('click', reviewQuiz)
+
 
 // Initialize the quiz data
 init();
