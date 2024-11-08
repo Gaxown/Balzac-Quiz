@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1,
+        "question": "Quel est le synonyme de 'heureux'?",
+        "answers": [
+            {"text": "Triste", "correct": false},
+            {"text": "Content", "correct": true},
+            {"text": "Fâché", "correct": false},
+            {"text": "Satisfait", "correct": true}
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Comment dit-on 'apple' en français?",
+        "answers": [
+            {"text": "Pomme", "correct": true},
+            {"text": "Orange", "correct": false},
+            {"text": "Banane", "correct": false},
+            {"text": "Fraise", "correct": false}
+        ]
+    },
+    {
+        "id": 3,
+        "question": "Quelle est la forme correcte du verbe 'être' à la première personne du singulier?",
+        "answers": [
+            {"text": "Tu es", "correct": false},
+            {"text": "Il est", "correct": false},
+            {"text": "Je suis", "correct": true},
+            {"text": "Nous sommes", "correct": false}
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Quel est le féminin de 'acteur'?",
+        "answers": [
+            {"text": "Acteuse", "correct": false},
+            {"text": "Acteure", "correct": false},
+            {"text": "Actrice", "correct": true},
+            {"text": "Acteuse", "correct": false}
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Comment dit-on 'goodbye' en français?",
+        "answers": [
+            {"text": "Au revoir", "correct": true},
+            {"text": "Bonjour", "correct": false},
+            {"text": "Salut", "correct": false},
+            {"text": "À bientôt", "correct": false}
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Quel est le pluriel de 'cheval'?",
+        "answers": [
+            {"text": "Chevals", "correct": false},
+            {"text": "Chevales", "correct": false},
+            {"text": "Chevaux", "correct": true},
+            {"text": "Chevalx", "correct": false}
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Quelle est la traduction de 'I love you'?",
+        "answers": [
+            {"text": "Je vous aime", "correct": false},
+            {"text": "Tu m'aimes", "correct": false},
+            {"text": "Nous aimons", "correct": false},
+            {"text": "Je t'aime", "correct": true}
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Quel est le verbe à l'infinitif de 'je mange'?",
+        "answers": [
+            {"text": "Mange", "correct": false},
+            {"text": "Manges", "correct": false},
+            {"text": "Manger", "correct": true},
+            {"text": "Mangons", "correct": false}
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Comment dit-on 'thank you' en français?",
+        "answers": [
+            {"text": "S'il vous plaît", "correct": false},
+            {"text": "Merci", "correct": true},
+            {"text": "Bonjour", "correct": false},
+            {"text": "Au revoir", "correct": false}
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Quel est le contraire de 'grand'?",
+        "answers": [
+            {"text": "Gros", "correct": false},
+            {"text": "Petit", "correct": true},
+            {"text": "Long", "correct": false},
+            {"text": "Large", "correct": false}
+        ]
+    },
+    {
+        "id": 11,
+        "question": "Quelle est la bonne conjugaison du verbe 'avoir' à la deuxième personne du singulier?",
+        "answers": [
+            {"text": "Vous avez", "correct": false},
+            {"text": "Il a", "correct": false},
+            {"text": "Tu as", "correct": true},
+            {"text": "Nous avons", "correct": false}
+        ]
+    },
+    {
+        "id": 12,
+        "question": "Quel est le féminin de 'roi'?",
+        "answers": [
+            {"text": "Roiess", "correct": false},
+            {"text": "Roi", "correct": false},
+            {"text": "Rois", "correct": false},
+            {"text": "Reine", "correct": true}
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Comment dit-on 'good morning' en français?",
+        "answers": [
+            {"text": "Bonsoir", "correct": false},
+            {"text": "Bonjour", "correct": true},
+            {"text": "Salut", "correct": false},
+            {"text": "Bonne nuit", "correct": false}
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Quel est le verbe 'aller' à la première personne du pluriel?",
+        "answers": [
+            {"text": "Nous allons", "correct": true},
+            {"text": "Vous allez", "correct": false},
+            {"text": "Ils vont", "correct": false},
+            {"text": "Je vais", "correct": false}
+        ]
+    },
+    {
+        "id": 15,
+        "question": "Quelle est la traduction de 'school'?",
+        "answers": [
+            {"text": "École", "correct": true},
+            {"text": "Université", "correct": false},
+            {"text": "Collège", "correct": false},
+            {"text": "Classe", "correct": false}
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Quel est le pluriel de 'fille'?",
+        "answers": [
+            {"text": "Filles", "correct": true},
+            {"text": "Fille", "correct": false},
+            {"text": "Filleses", "correct": false},
+            {"text": "Filleux", "correct": false}
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Comment dit-on 'to read' en français?",
+        "answers": [
+            {"text": "Écrire", "correct": false},
+            {"text": "Lire", "correct": true},
+            {"text": "Parler", "correct": false},
+            {"text": "Écouter", "correct": false}
+        ]
+    },
+    {
+        "id": 18,
+        "question": "Quel est le synonyme de 'rapide'?",
+        "answers": [
+            {"text": "Lent", "correct": false},
+            {"text": "Vite", "correct": true},
+            {"text": "Difficile", "correct": false},
+            {"text": "Facile", "correct": false}
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Quelle est la bonne conjugaison du verbe 'finir' à la troisième personne du singulier?",
+        "answers": [
+            {"text": "Il finit", "correct": true},
+            {"text": "Ils finissent", "correct": false},
+            {"text": "Je finis", "correct": false},
+            {"text": "Nous finissons", "correct": false}
+        ]
+    },
+    {
+        "id": 20,
+        "question": "Quel est le féminin de 'serveur'?",
+        "answers": [
+            {"text": "Serveuse", "correct": true},
+            {"text": "Servante", "correct": false},
+            {"text": "Serviteur", "correct": false},
+            {"text": "Servi", "correct": false}
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Comment dit-on 'to eat' en français?",
+        "answers": [
+            {"text": "Manger", "correct": true},
+            {"text": "Boire", "correct": false},
+            {"text": "Prendre", "correct": false},
+            {"text": "Cuisiner", "correct": false}
+        ]
+    },
+    {
+        "id": 22,
+        "question": "Quel est le contraire de 'chaud'?",
+        "answers": [
+            {"text": "Froid", "correct": true},
+            {"text": "Tiède", "correct": false},
+            {"text": "Chaud", "correct": false},
+            {"text": "Brûlant", "correct": false}
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Quelle est la traduction de 'friend'?",
+        "answers": [
+            {"text": "Ami", "correct": true},
+            {"text": "Rival", "correct": false},
+            {"text": "Connaissance", "correct": false},
+            {"text": "Partenaire", "correct": false}
+        ]
+    },
+    {
+        "id": 24,
+        "question": "Quel est le verbe 'faire' à la deuxième personne du pluriel?",
+        "answers": [
+            {"text": "Vous faites", "correct": true},
+            {"text": "Tu fais", "correct": false},
+            {"text": "Ils font", "correct": false},
+            {"text": "Je fais", "correct": false}
+        ]
+    },
+    {
+        "id": 25,
+        "question": "Comment dit-on 'to write' en français?",
+        "answers": [
+            {"text": "Écrire", "correct": true},
+            {"text": "Lire", "correct": false},
+            {"text": "Parler", "correct": false},
+            {"text": "Écouter", "correct": false}
+        ]
+    },
+    {
+        "id": 26,
+        "question": "Quel est le pluriel de 'vache'?",
+        "answers": [
+            {"text": "Vaches", "correct": true},
+            {"text": "Vache", "correct": false},
+            {"text": "Vachons", "correct": false},
+            {"text": "Vachesses", "correct": false}
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Quelle est la bonne conjugaison du verbe 'prendre' à la première personne du singulier?",
+        "answers": [
+            {"text": "Je prends", "correct": true},
+            {"text": "Tu prends", "correct": false},
+            {"text": "Il prend", "correct": false},
+            {"text": "Nous prenons", "correct": false}
+        ]
+    },
+    {
+        "id": 28,
+        "question": "Quel est le féminin de 'prince'?",
+        "answers": [
+            {"text": "Princesse", "correct": true},
+            {"text": "Prince", "correct": false},
+            {"text": "Princesseux", "correct": false},
+            {"text": "Princesseuse", "correct": false}
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Comment dit-on 'to sleep' en français?",
+        "answers": [
+            {"text": "Dormir", "correct": true},
+            {"text": "Rester", "correct": false},
+            {"text": "Se lever", "correct": false},
+            {"text": "S'asseoir", "correct": false}
+        ]
+    },
+    {
+        "id": 30,
+        "question": "Quel est le contraire de 'ouvert'?",
+        "answers": [
+            {"text": "Fermé", "correct": true},
+            {"text": "Large", "correct": false},
+            {"text": "Petit", "correct": false},
+            {"text": "Proche", "correct": false}
+        ]
+    },
+    {
+        "id": 31,
+        "question": "Quelle est la traduction de 'family'?",
+        "answers": [
+            {"text": "Famille", "correct": true},
+            {"text": "Groupe", "correct": false},
+            {"text": "Amis", "correct": false},
+            {"text": "Parents", "correct": false}
+        ]
+    },
+    {
+        "id": 32,
+        "question": "Quel est le verbe 'venir' à la troisième personne du pluriel?",
+        "answers": [
+            {"text": "Ils viennent", "correct": true},
+            {"text": "Vous venez", "correct": false},
+            {"text": "Nous venons", "correct": false},
+            {"text": "Je viens", "correct": false}
+        ]
+    },
+    {
+        "id": 33,
+        "question": "Comment dit-on 'to play' en français?",
+        "answers": [
+            {"text": "Jouer", "correct": true},
+            {"text": "Travailler", "correct": false},
+            {"text": "Étudier", "correct": false},
+            {"text": "Regarder", "correct": false}
+        ]
+    },
+    {
+        "id": 34,
+        "question": "Quel est le pluriel de 'chat'?",
+        "answers": [
+            {"text": "Chats", "correct": true},
+            {"text": "Chatses", "correct": false},
+            {"text": "Chattes", "correct": false},
+            {"text": "Chatses", "correct": false}
+        ]
+    },
+    {
+        "id": 35,
+        "question": "Quelle est la bonne conjugaison du verbe 'savoir'?",
+        "answers": [
+            {"text": "Je sais", "correct": true},
+            {"text": "Tu sais", "correct": false},
+            {"text": "Il sait", "correct": false},
+            {"text": "Nous savons", "correct": false}
+        ]
+    },
+    {
+        "id": 36,
+        "question": "Quel est le féminin de 'boulanger'?",
+        "answers": [
+            {"text": "Boulangère", "correct": true},
+            {"text": "Boulangeresse", "correct": false},
+            {"text": "Boulanger", "correct": false},
+            {"text": "Boulangerie", "correct": false}
+        ]
+    },
+    {
+        "id": 37,
+        "question": "Comment dit-on 'to dance' en français?",
+        "answers": [
+            {"text": "Danser", "correct": true},
+            {"text": "Chanter", "correct": false},
+            {"text": "Jouer", "correct": false},
+            {"text": "Écouter", "correct": false}
+        ]
+    },
+    {
+        "id": 38,
+        "question": "Quel est le contraire de 'jeune'?",
+        "answers": [
+            {"text": "Vieux", "correct": true},
+            {"text": "Nouveau", "correct": false},
+            {"text": "Ancien", "correct": false},
+            {"text": "Jeuneux", "correct": false}
+        ]
+    },
+    {
+        "id": 39,
+        "question": "Quelle est la traduction de 'book'?",
+        "answers": [
+            {"text": "Livre", "correct": true},
+            {"text": "Magazine", "correct": false},
+            {"text": "Journal", "correct": false},
+            {"text": "Article", "correct": false}
+        ]
+    },
+    {
+        "id": 40,
+        "question": "Quel est le verbe 'voir' à la deuxième personne du singulier?",
+        "answers": [
+            {"text": "Tu vois", "correct": true},
+            {"text": "Vous voyez", "correct": false},
+            {"text": "Il voit", "correct": false},
+            {"text": "Je vois", "correct": false}
+        ]
+    },
+    {
+        "id": 41,
+        "question": "Comment dit-on 'to travel' en français?",
+        "answers": [
+            {"text": "Voyager", "correct": true},
+            {"text": "Rester", "correct": false},
+            {"text": "Visiter", "correct": false},
+            {"text": "Explorer", "correct": false}
+        ]
+    },
+    {
+        "id": 42,
+        "question": "Quel est le pluriel de 'arbre'?",
+        "answers": [
+            {"text": "Arbres", "correct": true},
+            {"text": "Arbre", "correct": false},
+            {"text": "Arbres", "correct": false},
+            {"text": "Arbreses", "correct": false}
+        ]
+    },
+    {
+        "id": 43,
+        "question": "Quelle est la bonne conjugaison du verbe 'parler' à la première personne du pluriel?",
+        "answers": [
+            {"text": "Nous parlons", "correct": true},
+            {"text": "Vous parlez", "correct": false},
+            {"text": "Ils parlent", "correct": false},
+            {"text": "Je parle", "correct": false}
+        ]
+    },
+    {
+        "id": 44,
+        "question": "Quel est le féminin de 'acteur'?",
+        "answers": [
+            {"text": "Actrice", "correct": true},
+            {"text": "Acteuse", "correct": false},
+            {"text": "Acteur", "correct": false},
+            {"text": "Acteure", "correct": false}
+        ]
+    },
+    {
+        "id": 45,
+        "question": "Comment dit-on 'to cook' en français?",
+        "answers": [
+            {"text": "Cuisiner", "correct": true},
+            {"text": "Manger", "correct": false},
+            {"text": "Préparer", "correct": false},
+            {"text": "Servir", "correct": false}
+        ]
+    },
+    {
+        "id": 46,
+        "question": "Quel est le contraire de 'facile'?",
+        "answers": [
+            {"text": "Difficile", "correct": true},
+            {"text": "Simple", "correct": false},
+            {"text": "Compliqué", "correct": false},
+            {"text": "Facileux", "correct": false}
+        ]
+    },
+    {
+        "id": 47,
+        "question": "Quelle est la traduction de 'city'?",
+        "answers": [
+            {"text": "Ville", "correct": true},
+            {"text": "Village", "correct": false},
+            {"text": "Quartier", "correct": false},
+            {"text": "Région", "correct": false}
+        ]
+    },
+    {
+        "id": 48,
+        "question": "Quel est le verbe 'acheter' à la troisième personne du singulier?",
+        "answers": [
+            {"text": "Il achète", "correct": true},
+            {"text": "Vous achetez", "correct": false},
+            {"text": "Nous achetons", "correct": false},
+            {"text": "Je achète", "correct": false}
+        ]
+    },
+    {
+        "id": 49,
+        "question": "Comment dit-on 'to sing' en français?",
+        "answers": [
+            {"text": "Chanter", "correct": true},
+            {"text": "Danser", "correct": false},
+            {"text": "Écrire", "correct": false},
+            {"text": "Parler", "correct": false}
+        ]
+    },
+    {
+        "id": 50,
+        "question": "Quel est le pluriel de 'maison'?",
+        "answers": [
+            {"text": "Maisons", "correct": true},
+            {"text": "Maison", "correct": false},
+            {"text": "Maisones", "correct": false},
+            {"text": "Maisonses", "correct": false}
+        ]
+    }
+]

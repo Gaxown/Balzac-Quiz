@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div id="quiz-container" class="bg-white shadow-lg rounded-lg p-6 w-96 hidden">
+        <div class="flex justify-between items-center mb-4">
+            <p class="text-lg font-semibold">Timer</p>
+            <div class="relative w-full h-2 bg-gray-200 rounded">
+                <div id="timer-progress" class="absolute h-full bg-green-500 rounded transition-all duration-1000"
+                    style="width: 100%;"></div>
+            </div>
+            <span id="time" class="text-lg font-semibold ml-2">20</span>
+        </div>
+        <div id="score-container" class="mb-4">
+            <p class="text-lg font-semibold">Your Score: <span id="score-value" class="text-blue-600">0</span></p>
+        </div>
+        <div id="questions-container" class="mb-4"></div>
+        <button id="next-button" class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600 transition"
+            style="display: none;">Next</button>
+    </div>
+    <button id="start-quiz-button" class="bg-green-500 text-white rounded px-4 py-2 hover:bg-green-600 transition">Start
+        Quiz</button>
+    <button id="review"
+        class="bg-green-500 mt-4 text-white rounded px-4 py-2 hover:bg-green-600 transition">Review</button>
+    <div id="review-container" class="p-4" style="display:none;">
+        <h2 class="text-2xl font-bold mb-4">Quiz Review</h2>
+        <div id="correct-answers-list" class="mb-4"></div>
+        <div id="wrong-answers-list" class="mb-4"></div>
+        <div id="unattempted-questions-list" class="mb-4"></div>
+        <div id="review-summary" class="border-t pt-4 mt-4"></div>
+    </div>
+    <div id="quizizz" class="w-full max-w-md p-4 bg-purple-900 rounded-lg shadow-lg">
+        <div class="text-center mb-4">
+        </div>
+        <div class="text-center text-gray-300 mb-4">
+            Game Summary
+        </div>
+        <div class="bg-purple-800 p-4 rounded-lg">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center">
+                    <img alt="Cartoon character with a funny expression" class="w-12 h-12 rounded-full" height="50"
+                        src="https://storage.googleapis.com/a1aa/image/Iy40lrhufs0QQSL61YNgiKrg1vNZeKB5UPpAEuvkTyoBH5uTA.jpg"
+                        width="50" />
+                    <div class="ml-4">
+                        <div class="text-white text-lg">
+                            Ana
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="flex justify-between text-gray-400 mb-1">
+                    <span>
+                        Correct
+                    </span>
+                    <span>
+                        Accuracy
+                    </span>
+                    <span>
+                        Incorrect
+                    </span>
+                </div>
+                <div class="relative h-4 bg-gray-700 rounded-full">
+                    <div class="absolute top-0 left-0 h-4 bg-green-500 rounded-full" style="width: 100%">
+                    </div>
+                    <div class="absolute top-0 right-0 h-4 bg-green-500 rounded-full text-white text-xs px-2">
+                        100%
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-300 mb-4">
+                Performance Stats
+            </div>
+            <div class="grid grid-cols-2 gap-4 text-center text-white">
+                <div class="bg-purple-700 p-4 rounded-lg relative">
+                    <img alt="Checkmark icon" class="absolute inset-0 w-full h-full object-cover opacity-60"
+                        src="./assets/check-circle.png" style="width: 80px;height: 80px; transform: rotate(-15deg);" />
+                    <div class="relative z-10 text-2xl">
+                        ${correctAnswersCount}
+                    </div>
+                    <div class="relative z-10 text-gray-300">
+                        Correct
+                    </div>
+                </div>
+                <div class="bg-purple-700 p-4 rounded-lg relative">
+                    <img alt="Cross icon" class="absolute inset-0 w-full h-full object-cover opacity-60" height="50"
+                        src="./assets/circle-x.png" width="50"
+                        style="width: 80px;height: 80px; transform: rotate(-15deg);" />
+                    <div class="relative z-10 text-2xl">
+                        ${wrongAnswersCount}
+                    </div>
+                    <div class="relative z-10 text-gray-300">
+                        Incorrect
+                    </div>
+                </div>
+                <div class="bg-purple-700 p-4 rounded-lg relative">
+                    <img alt="Minus icon" class="absolute inset-0 w-full h-full object-cover opacity-60" height="50"
+                        src="./assets/stopwatch.png" width="50"
+                        style="width: 80px;height: 80px; transform: rotate(-15deg);" />
+                    <div class="relative z-10 text-2xl">
+                        ${unattemptedCount}
+                    </div>
+                    <div class="relative z-10 text-gray-300">
+                        Unattempted
+                    </div>
+                </div>
+                <div class="bg-purple-700 p-4 rounded-lg relative">
+                    <img alt="Clock icon" class="absolute inset-0 w-full h-full object-cover opacity-60" height="50"
+                        src="./assets/hourglass-end.png" width="50"
+                        style="width: 80px;height: 80px; transform: rotate(-15deg);" />
+                    <div class="relative z-10 text-2xl">
+                        ${averageTime} s
+                    </div>
+                    <div class="relative z-10 text-gray-300">
+                        Avg. Time / Question
+                    </div>
+                </div>
+                <div class="bg-purple-700 p-4 rounded-lg relative col-span-2">
+                    <img alt="Fire icon" class="absolute inset-0 w-full h-full object-cover opacity-60" height="50"
+                        src="./assets/flame.png" style="width: 80px;height: 80px; transform: rotate(-15deg);" />
+                    <div class="relative z-10 text-2xl">
+                        20
+                    </div>
+                    <div class="relative z-10 text-gray-300">
+                        Longest Streak
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="review-summary"></div>
+    <script src="test.js"></script>
+</body>
+
+</html>
