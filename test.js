@@ -121,3 +121,62 @@ async function init() {
         console.error('Error loading data:', error);
     }
 }
+
+// Timer Handling
+
+function startTimer() {
+    clearInterval(timer); 
+    timeLeft = 20; 
+    document.getElementById('time').textContent = timeLeft; 
+    const timerProgress = document.getElementById('timer-progress');
+    timerProgress.style.width = '100%'; // Reset the progress bar to full width
+    timerProgress.className = 'absolute h-full rounded transition-all duration-1000'; // Reset class
+
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('time').textContent = timeLeft; 
+        // Calculate the percentage of time left
+        const percentageLeft = timeLeft / 20 * 100;
+        timerProgress.style.width = `${percentageLeft}%`; 
+
+        // Change the color of the progress bar based on the remaining time
+        if (percentageLeft > 50) {
+            timerProgress.classList.add('bg-green-500'); // Green for > 50%
+            timerProgress.classList.remove('bg-yellow-500', 'bg-red-500');
+        } else if (percentageLeft > 25) {
+            timerProgress.classList.add('bg-yellow-500'); // Yellow for 25% to 50%
+            timerProgress.classList.remove('bg-green-500', 'bg-red-500');
+        } else {
+            timerProgress.classList.add('bg-red-500'); // Red for < 25%
+            timerProgress.classList.remove('bg-green-500', 'bg-yellow-500');
+        }
+
+        if (timeLeft <= 0) {
+            clearInterval(timer); 
+            // goToNextQuestion(); 
+            handleTimeOut(); // Call the function to handle timeout
+            showCorrectAnswer(); // Call the function to highlight the correct answer
+        }
+    }, 1000); 
+}
+
+
+function handleTimeOut() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const questionId = currentQuestion.id; // Assuming each question has a unique ID
+    
+    // Save the unattempted question
+    let quizData = JSON.parse(localStorage.getItem('quizData')) || {
+        correct: [],
+        wrong: [],
+        unattempted: []
+    };
+    
+    unattemptedCount++;
+    quizData.unattempted.push({ questionId });
+    localStorage.setItem('quizData', JSON.stringify(quizData));
+
+    // Show the Next button
+    const nextButton = document.getElementById('next-button');
+    nextButton.style.display = 'block'; // Show the Next button
+}
